@@ -10,21 +10,21 @@ import java.util.ArrayList;
 public class Polynomial {
 
     //Коэфициенты
-    private ArrayList<RNumber> coefficient;
+    private ArrayList<QNumber> coefficient;
 
     //Степень
     private Integer power;
 
-    public Polynomial(ArrayList<RNumber> coefficient, Integer power) {
+    public Polynomial(ArrayList<QNumber> coefficient, Integer power) {
         this.coefficient = coefficient;
         this.power = power;
     }
 
-    public ArrayList<RNumber> getCoefficient() {
+    public ArrayList<QNumber> getCoefficient() {
         return coefficient;
     }
 
-    public void setCoefficient(ArrayList<RNumber> coefficient) {
+    public void setCoefficient(ArrayList<QNumber> coefficient) {
         this.coefficient = coefficient;
     }
 

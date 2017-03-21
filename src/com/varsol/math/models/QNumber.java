@@ -5,14 +5,14 @@ package com.varsol.math.models;
  *
  * Рациональное число
  */
-public class RNumber {
+public class QNumber {
 
     //Числитель
     private ZNumber numerator;
     //Знаменатель
     private NNumber denominator;
 
-    public RNumber(ZNumber numerator, NNumber denominator) {
+    public QNumber(ZNumber numerator, NNumber denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
