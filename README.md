@@ -37,7 +37,7 @@ public static Integer COM_NN_D(NNumber first, NNumber second){
 ### ZController (целые числа)
 Вика, Алена, Саша Милакин
 
-### RController (рациональные числа)
+### QController (рациональные числа)
 Егор, Ярик, Дима
 
 ### PolynomialController (многочлены)
