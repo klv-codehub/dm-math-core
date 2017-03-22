@@ -33,7 +33,13 @@ public class NController {
     }
 
     public static Boolean NZER_N_B(NNumber number){
-        return false;
+        ArrayList<Integer> num = number.getNumbers();
+        if (num.get(number.getElderPosition()) == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public static NNumber ADD_1N_N(NNumber number){
