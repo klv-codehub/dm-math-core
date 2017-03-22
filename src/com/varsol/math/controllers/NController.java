@@ -11,8 +11,25 @@ import java.util.ArrayList;
  */
 public class NController {
 
-    public static Integer COM_NN_D(NNumber first, NNumber second){
-        return 0;
+    public static Integer COM_NN_D(NNumber first, NNumber second) {
+        if (first.getElderPosition() > second.getElderPosition()){
+            return 2;
+        } else if (first.getElderPosition() < second.getElderPosition()){
+            return 1;
+        } else {
+            ArrayList<Integer> num1 = first.getNumbers();
+            ArrayList<Integer> num2 = second.getNumbers();
+            for (int i = first.getElderPosition() - 1; i >= 0; i--){
+                if (num1.get(i) > num2.get(i)){
+                    return 2;
+                }
+
+                if (num2.get(i) > num1.get(i)){
+                    return 1;
+                }
+            }
+            return 0;
+        }
     }
 
     public static Boolean NZER_N_B(NNumber number){
