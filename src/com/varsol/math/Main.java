@@ -19,7 +19,9 @@ public class Main {
         ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 4, 6, 3, 1));
         NNumber second = new NNumber(arr2, 5);
 
-        System.out.print(NController.COM_NN_D(first, second));
+
+        System.out.println(NController.COM_NN_D(first, second));
+
     }
 
 }
