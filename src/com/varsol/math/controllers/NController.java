@@ -34,7 +34,7 @@ public class NController {
 
 
     /**
-        @author klv-codehub
+        @author
 
         Проверка на ноль: если число не равно нулю, то «да» иначе «нет»
         На вход: Натуральное длинное число NNumber
@@ -43,20 +43,14 @@ public class NController {
     */
 
     public static Boolean NZER_N_B(NNumber number){
-        ArrayList<Integer> num = number.getNumbers();
-        if (num.get(0) == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return (!(number.getNumbers().size() == 1 && ((Integer) number.getNumbers().get(0)).intValue()== 0));
     }
 
 
     /**
         -------------------------------------------------------------------------------------------
 
-        @author klv-codehub
+        @author Artem Kaloev/Alexander Shvalev
 
         Добавление 1 к натуральному числу
         На вход: Натуральное длинное число NNumber
@@ -70,36 +64,35 @@ public class NController {
         ArrayList<Integer> num = number.getNumbers();
 
         //прибавляем единицу, если найдется цифра, меньшая 9
-        for (int i = number.getElderPosition() - 1; i >= 0; i--) {
+        for (int i = 0; i < number.getElderPosition(); i++) {
             if (num.get(i) < 9) {
                 Integer n = num.get(i);
                 num.set(i, ++n);
                 //если такая цифра нашлась, то зануляем предыдущие разряды, задаем новые цифры и возвращаем число
-                for (int j = i + 1; j < number.getElderPosition(); j++) {
+                for (int j = i - 1; j >= 0; j--) {
                     num.set(j, 0);
                 }
                 number.setNumbers(num);
-                //System.out.print(num);        отладка
+                //System.out.print(num);        //отладка
                 return number;
             }
         }
 
         //добавляем разряд числа
-        int newElderPosition = number.getElderPosition() + 1;
-        num.add(0, 1);
+        num.add(number.getElderPosition(), 1);
 
-        //System.out.print(num);        отладка
+        //System.out.print(num);        //отладка
 
         //зануляем предыдущие разряды
-        for (int j = newElderPosition - 1; j > 0; j--) {
+        for (int j = 0; j < number.getElderPosition(); j++) {
            num.set(j, 0);
         }
 
         //передаем цифры и их кол-во в number
         number.setNumbers(num);
-        number.setElderPosition(newElderPosition);
+        number.setElderPosition(num.size());
 
-        //System.out.print(num);        отладка
+        //System.out.print(num);        //отладка
 
         return number;
     }
@@ -108,7 +101,7 @@ public class NController {
     /**
         -------------------------------------------------------------------------------------------
 
-        @author klv-codehub
+        @author Artem Kaloev/Alexander Shvalev
 
         Сложение натуральных чисел
         На вход: Два натуральных длинных числа NNumber first, NNumber second
@@ -132,33 +125,33 @@ public class NController {
         ArrayList<Integer> result = new ArrayList<>();
 
         //для удобства вычисления обнуляем элементы массива меньшего размера
-        for (int j = 0; j < first.getElderPosition() - second.getElderPosition(); j++) {
+        for (int j = second.getElderPosition(); j < first.getElderPosition(); j++) {
             num2.add(j, 0);
         }
 
-        //System.out.print(num1);     System.out.print(num2);       отладка
+//        System.out.print(num1);     System.out.print(num2);       //отладка
 
         //производим суммирование "столбиком"
         int i;
         int sum = 0;
-        for (i = first.getElderPosition() - 1; i >= 0; i--) {
+        for (i = 0; i < first.getElderPosition(); i++) {
             sum += num1.get(i) + num2.get(i);
             if (sum <= 9) {
-                result.add(0, sum);
+                result.add(i, sum);
                 sum = 0;
             } else {
-                result.add(0, sum - 10);
+                result.add(i, sum - 10);
                 sum = 1;
-                if (i == 0) {
-                    result.add(0, sum);
+                if (i == first.getElderPosition() - 1) {
+                    result.add(++i, sum);
                 }
             }
         }
 
-        //System.out.print(result);     отладка
+        //System.out.print(num1 + "+" + num2 + "=" + result);     //отладка
 
         //создаем результирующее длинное число rResult
-        NNumber rResult = new NNumber(result, i);
+        NNumber rResult = new NNumber(result, result.size());
 
         return rResult;
     }
@@ -167,7 +160,7 @@ public class NController {
     /**
      -------------------------------------------------------------------------------------------
 
-     @author klv-codehub
+     @author Artem Kaloev/Alexander Shvalev
 
      Вычитание из первого большего натурального числа второго меньшего или равного
      На вход: Два натуральных длинных числа NNumber first, NNumber second
@@ -191,17 +184,17 @@ public class NController {
         ArrayList<Integer> result = new ArrayList<>();
 
         //для удобства вычисления обнуляем элементы массива меньшего размера
-        for (int j = 0; j < first.getElderPosition() - second.getElderPosition(); j++) {
+        for (int j = second.getElderPosition(); j < first.getElderPosition(); j++) {
             num2.add(j, 0);
         }
 
-        //System.out.print(num1);             System.out.print(num2);               отладка
-        //System.out.print(num1.size());      System.out.print(num2.size());        отладка
+        //System.out.print(num1);             System.out.print(num2);               //отладка
+        //System.out.println(num1.size());      System.out.println(num2.size());        //отладка
 
         //производим вычитание "столбиком"
         int i;
         int dif = 0;
-        for (i = first.getElderPosition() - 1; i >= 0; i--) {
+        for (i = 0; i < first.getElderPosition(); i++) {
             Integer n = num1.get(i);
             num1.set(i, n + dif);
             if (num1.get(i) < num2.get(i)) {
@@ -211,43 +204,154 @@ public class NController {
             } else {
                 dif = 0;
             }
-            result.add(0, num1.get(i) - num2.get(i));
+            result.add(i, num1.get(i) - num2.get(i));
         }
-        System.out.println(result);
 
+        //System.out.print(result);         //отладка
 
         //удаляем лишние нули числа (которые стоят спереди)
-        while (result.get(0) == 0 && result.size() != 1) {
-            result.remove(0);
-            System.out.println(result);
+        for (i = first.getElderPosition() - 1; result.get(i) == 0 && result.size() != 1; i--) {
+            result.remove(i);
         }
-        int resultElderPosition = first.getElderPosition() - i;
 
-        //System.out.print(result);         отладка
+        //System.out.print(result);         //отладка
 
         //создаем результирующее длинное число rResult
-        NNumber rResult = new NNumber(result, resultElderPosition);
+        NNumber rResult = new NNumber(result, result.size());
 
         return rResult;
     }
 
-    public static NNumber MUL_ND_N(NNumber natural, Integer number){
-        return null;
+
+    /*
+        @author yaroslavok
+        @author ItNoN
+        @author EgorKolyshkin
+
+        Умножение натурального числа типа NNumber на цифру
+        На вход: Натуральное число типа NNumber, натуральное число
+        Возвращает: Натуральное число
+
+    */
+
+    public static NNumber MUL_ND_N(NNumber natural, Integer number) {
+        Integer index = Integer.valueOf(0);
+        ArrayList res = new ArrayList();
+
+        for (Integer i = Integer.valueOf(0); i.intValue() < natural.getElderPosition().intValue(); i = Integer.valueOf(i.intValue() + 1)) {
+            res.add(Integer.valueOf(number.intValue() * ((Integer) natural.getNumbers().get(i.intValue())).intValue() % 10 + index.intValue()));
+            index = Integer.valueOf(number.intValue() * ((Integer) natural.getNumbers().get(i.intValue())).intValue() / 10);
+        }
+
+        if (index.intValue() != 0) {
+            res.add(index);
+        }
+        return new NNumber(res, Integer.valueOf(res.size()));
     }
+
+    /*
+        @author yaroslavok
+        @author ItNoN
+        @author EgorKolyshkin
+
+        Умножение натурального числа типа NNumber на 10^k
+        На вход: Натуральное число типа NNumber, k - коэффициент
+        Возвращает: Натуральное число
+
+    */
 
     public static NNumber MUL_Nk_N(NNumber natural, Integer k){
-        return null;
+        NNumber res = new NNumber (natural.getNumbers(),k);
+        for (int i = 0; i < k.intValue(); i++){
+            res.getNumbers().add(0 , Integer.valueOf(0));
+        }
+        //System.out.print(res.getNumbers());
+        return res;
     }
 
-    public static NNumber MUL_NN_N(NNumber first, NNumber second){
-        return null;
+
+    /**
+     -------------------------------------------------------------------------------------------
+
+     @author
+
+     Умножение натуральных чисел
+     На вход: Два натуральных длинных числа NNumber first, NNumber second
+     Возвращает: Натуральное длинное число NNumber
+
+     -------------------------------------------------------------------------------------------
+     */
+
+    public static NNumber MUL_NN_N(NNumber first, NNumber second) {
+
+        if(COM_NN_D(first, second).intValue() == 2) {
+            NNumber pos = first;
+            first = second;
+            second = pos;
+        }
+
+        Integer modulo = Integer.valueOf(0);
+        ArrayList bigger = second.getNumbers();
+        ArrayList smaller = first.getNumbers();
+
+        for(Integer pos1 = Integer.valueOf(0); pos1.intValue() < smaller.size(); pos1 = Integer.valueOf(pos1.intValue() + 1)) {
+            int var6 = ((Integer)bigger.get(pos1.intValue())).intValue();
+        }
+
+        first.setNumbers(bigger);
+        return first;
     }
 
-    public static NNumber SUB_NDN_N(NNumber first, NNumber second, Integer number){
-        return null;
+
+    /**
+     -------------------------------------------------------------------------------------------
+
+     @author Artem Kaloev/Alexander Shvalev
+
+     Вычитание из натурального другого натурального, умноженного на цифру для случая с неотрицательным результатом
+     На вход: Два натуральных длинных числа NNumber first, NNumber second; цифра  number, на которую умножается
+     вычитаемое число
+     Возвращает: Натуральное длинное число NNumber
+
+     -------------------------------------------------------------------------------------------
+     */
+
+    public static NNumber SUB_NDN_N(NNumber first, NNumber second, Integer number) {
+
+        if (COM_NN_D(first, second) == 1) {
+            NNumber tmp = first;
+            first = second;
+            second = tmp;
+        }
+        second = MUL_ND_N(second, number);
+        return SUB_NN_N(first, second);
+
     }
+
+
+    /**
+     -------------------------------------------------------------------------------------------
+
+     @author Artem Kaloev/Alexander Shvalev
+
+     Вычисление первой цифры деления большего натурального на меньшее, домноженное на 10^k,
+        где k - номер позиции этой цифры (номер считается с нуля)
+     На вход: Два натуральных длинных числа NNumber first, NNumber second; k - коэффициент
+     Возвращает: Натуральное длинное число NNumber
+
+     -------------------------------------------------------------------------------------------
+     */
 
     public static NNumber DIV_NN_Dk(NNumber first, NNumber second, Integer k){
+
+        if (COM_NN_D(first, second) == 1) {
+            NNumber tmp = first;
+            first = second;
+            second = tmp;
+        }
+
+
+
         return null;
     }
 

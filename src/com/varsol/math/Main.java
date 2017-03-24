@@ -13,14 +13,16 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args){
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 4, 6, 3, 0));
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 4, 6, 3, 8));
         NNumber first = new NNumber(arr, 5);
 
-        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 4, 6, 3, 1));
+        ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 4, 6, 3, 8));
         NNumber second = new NNumber(arr2, 5);
 
 
-        System.out.println(NController.COM_NN_D(first, second));
+        System.out.println(NController.SUB_NDN_N(first, second, 3).getNumbers());
+        //NController.SUB_NDN_N(first, second, 2);
+        //System.out.println(NController.COM_NN_D(first, second));
 
     }
 
