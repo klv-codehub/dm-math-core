@@ -3,6 +3,7 @@ package com.varsol.math.controllers;
 import com.varsol.math.models.NNumber;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by simon on 21.03.17.
@@ -342,24 +343,63 @@ public class NController {
      -------------------------------------------------------------------------------------------
      */
 
-    public static NNumber DIV_NN_Dk(NNumber first, NNumber second, Integer k){
+    public static NNumber DIV_NN_Dk(NNumber first, NNumber second) {
 
-        if (COM_NN_D(first, second) == 1) {
-            NNumber tmp = first;
-            first = second;
-            second = tmp;
+        NNumber arresult = DIV_NN_N(first, second);
+
+        if (arresult != null) {
+             for (int i = 0; i < arresult.getElderPosition() - 1; i++) {
+                arresult.getNumbers().remove(0);
+             }
+
+            arresult = MUL_Nk_N(arresult, arresult.getElderPosition() - 1);
+
+            //System.out.println(arresult.getNumbers());
+
+            return  arresult;
+        } else {
+            return null;
         }
-
-
-
-        return null;
     }
 
-    public static NNumber DIV_NN_N(NNumber first, NNumber second){
-        return null;
+
+    /**
+     -------------------------------------------------------------------------------------------
+
+     @author Artem Kaloev/Alexander Shvalev
+
+     Частное от деления большего натурального числа на меньшее или равное натуральное с остатком
+     (делитель отличен от нуля)
+     На вход: Два натуральных длинных числа NNumber first, NNumber second
+     Возвращает: Натуральное длинное число NNumber
+
+     -------------------------------------------------------------------------------------------
+     */
+
+    public static NNumber DIV_NN_N(NNumber first, NNumber second) {
+
+        ArrayList<Integer> result = new ArrayList<>(Arrays.asList(0));
+        NNumber arresult = new NNumber(result, result.size());
+        if (COM_NN_D(first, second) == 1) {
+            NNumber pos = first;
+            first = second;
+            second = pos;
+        }
+        if (!NZER_N_B(second)) {
+            do {
+                first = SUB_NN_N(first, second);
+                ADD_1N_N(arresult);
+                System.out.println("ARRESULT = " + arresult.getNumbers());
+            } while (COM_NN_D(first, second) != 1);
+            arresult.setElderPosition(result.size());
+            return  arresult;
+        } else {
+            return null;
+        }
     }
 
-    public static NNumber MOD_NN_N(NNumber first, NNumber second){
+    public static NNumber MOD_NN_N(NNumber first, NNumber second) {
+
         return null;
     }
 

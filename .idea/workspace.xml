@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="950464f7-27e6-4e28-8fe3-6a5085176866" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MathSystem/com/varsol/math/controllers/NController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MathSystem/com/varsol/math/Main.class" afterPath="$PROJECT_DIR$/out/production/MathSystem/com/varsol/math/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MathSystem/com/varsol/math/controllers/NController.class" afterPath="$PROJECT_DIR$/out/production/MathSystem/com/varsol/math/controllers/NController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/varsol/math/Main.java" afterPath="$PROJECT_DIR$/src/com/varsol/math/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/varsol/math/controllers/NController.java" afterPath="$PROJECT_DIR$/src/com/varsol/math/controllers/NController.java" />
@@ -24,8 +25,8 @@
       <file leaf-file-name="NNumber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/varsol/math/models/NNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="330">
+              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <element signature="e#464#465#0" expanded="true" />
                 <element signature="e#494#495#0" expanded="true" />
@@ -57,34 +58,9 @@
       <file leaf-file-name="PolynomialController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/varsol/math/controllers/PolynomialController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="495">
               <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-              <folding>
-                <element signature="e#301#302#0" expanded="false" />
-                <element signature="e#328#329#0" expanded="false" />
-                <element signature="e#405#406#0" expanded="false" />
-                <element signature="e#432#433#0" expanded="false" />
-                <element signature="e#511#512#0" expanded="false" />
-                <element signature="e#538#539#0" expanded="false" />
-                <element signature="e#624#625#0" expanded="false" />
-                <element signature="e#651#652#0" expanded="false" />
-                <element signature="e#710#711#0" expanded="false" />
-                <element signature="e#737#738#0" expanded="false" />
-                <element signature="e#796#797#0" expanded="false" />
-                <element signature="e#823#824#0" expanded="false" />
-                <element signature="e#885#886#0" expanded="false" />
-                <element signature="e#912#913#0" expanded="false" />
-                <element signature="e#989#990#0" expanded="false" />
-                <element signature="e#1016#1017#0" expanded="false" />
-                <element signature="e#1079#1080#0" expanded="false" />
-                <element signature="e#1106#1107#0" expanded="false" />
-                <element signature="e#1169#1170#0" expanded="false" />
-                <element signature="e#1196#1197#0" expanded="false" />
-                <element signature="e#1271#1272#0" expanded="false" />
-                <element signature="e#1298#1299#0" expanded="false" />
-                <element signature="e#1360#1361#0" expanded="false" />
-                <element signature="e#1387#1388#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,8 +68,8 @@
       <file leaf-file-name="NController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/varsol/math/controllers/NController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-229">
-              <caret line="321" column="32" lean-forward="true" selection-start-line="321" selection-start-column="32" selection-end-line="321" selection-end-column="32" />
+            <state relative-caret-position="56">
+              <caret line="380" column="28" lean-forward="false" selection-start-line="380" selection-start-column="28" selection-end-line="380" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,8 +80,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/varsol/math/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+            <state relative-caret-position="270">
+              <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,7 +140,7 @@
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -177,111 +153,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="varsol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="varsol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MathSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="varsol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="math" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -594,32 +466,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,32 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -754,32 +576,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -834,32 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -940,32 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,32 +786,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,9 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1146,34 +865,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/varsol/math/controllers/PolynomialController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="495">
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="e#301#302#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-            <element signature="e#511#512#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#912#913#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1271#1272#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,8 +881,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/varsol/math/models/NNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="330">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#494#495#0" expanded="true" />
@@ -1198,8 +892,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/varsol/math/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        <state relative-caret-position="270">
+          <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1208,8 +902,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/varsol/math/controllers/NController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
-          <caret line="321" column="32" lean-forward="true" selection-start-line="321" selection-start-column="32" selection-end-line="321" selection-end-column="32" />
+        <state relative-caret-position="56">
+          <caret line="380" column="28" lean-forward="false" selection-start-line="380" selection-start-column="28" selection-end-line="380" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
