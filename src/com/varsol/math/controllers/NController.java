@@ -335,8 +335,8 @@ public class NController {
 
      @author Artem Kaloev/Alexander Shvalev
 
-     Вычисление первой цифры деления большего натурального на меньшее, домноженное на 10^k,
-        где k - номер позиции этой цифры (номер считается с нуля)
+     Вычисление первой цифры деления большего натурального на меньшее, (домноженное на 10^k,
+        где k - номер позиции этой цифры (номер считается с нуля))
      На вход: Два натуральных длинных числа NNumber first, NNumber second; k - коэффициент
      Возвращает: Натуральное длинное число NNumber
 
@@ -345,21 +345,59 @@ public class NController {
 
     public static NNumber DIV_NN_Dk(NNumber first, NNumber second) {
 
-        NNumber arresult = DIV_NN_N(first, second);
-
-        if (arresult != null) {
-             for (int i = 0; i < arresult.getElderPosition() - 1; i++) {
-                arresult.getNumbers().remove(0);
-             }
-
-            arresult = MUL_Nk_N(arresult, arresult.getElderPosition() - 1);
-
-            //System.out.println(arresult.getNumbers());
-
-            return  arresult;
-        } else {
-            return null;
+        Integer k = 0;
+/*
+        if (COM_NN_D(first, second) == 1) {
+            NNumber pos = first;
+            first = second;
+            second = pos;
         }
+*/
+        //Выбор количества разрядов из большего числа, чтобы можно было произвести первый шаг деления столбиком.
+        ArrayList <Integer> arr = new ArrayList<>();
+        for (int i = 0; i < second.getElderPosition(); i++) {
+            arr.add(0, (Integer) first.getNumbers().get(first.getElderPosition() - i - 1));
+            //System.out.println(arr);
+
+        }
+        //System.out.println(arr);
+
+
+        NNumber del = new NNumber(arr, second.getElderPosition());
+        if (COM_NN_D(del, second) == 1) {
+            arr.add(0, (Integer) first.getNumbers().get(first.getElderPosition() - second.getElderPosition() - 1));
+            del.setNumbers(arr);
+            del.setElderPosition(del.getElderPosition() + 1);
+        }
+        //NNumber del = new NNumber(arr, second.getElderPosition());
+        //System.out.println(del.getNumbers());
+        //System.out.println(del.getElderPosition());
+
+        //System.out.println(second.getNumbers());
+        //System.out.println(second.getElderPosition());
+
+        //System.out.println(COM_NN_D(del, second));
+        //Деление
+
+        int tmp = first.getElderPosition() - del.getElderPosition();
+
+        while (COM_NN_D(del, second) != 1) {
+            del = SUB_NN_N(del, second);
+            k++;
+            //System.out.println(del);
+            //System.out.println(k);
+            //break;
+
+        }
+        //System.out.println(first.getElderPosition());
+
+  //      System.out.println(del.getElderPosition());
+
+
+        ArrayList<Integer> res = new ArrayList<>(Arrays.asList(k));
+        NNumber result = new NNumber(res, res.size());
+        return MUL_Nk_N(result, tmp);
+
     }
 
 
@@ -378,34 +416,75 @@ public class NController {
 
     public static NNumber DIV_NN_N(NNumber first, NNumber second) {
 
-        ArrayList<Integer> result = new ArrayList<>(Arrays.asList(0));
-        NNumber arresult = new NNumber(result, result.size());
         if (COM_NN_D(first, second) == 1) {
             NNumber pos = first;
             first = second;
             second = pos;
         }
-        if (!NZER_N_B(second)) {
-            do {
-                first = SUB_NN_N(first, second);
-                ADD_1N_N(arresult);
-                System.out.println("ARRESULT = " + arresult.getNumbers());
-            } while (COM_NN_D(first, second) != 1);
-            arresult.setElderPosition(result.size());
-            return  arresult;
-        } else {
-            return null;
+
+        ArrayList arr = first.getNumbers();
+        NNumber nf = new NNumber(arr, arr.size());
+        ArrayList<Integer> result = new ArrayList<>(Arrays.asList(0));
+        NNumber arresult = new NNumber(result, result.size());
+        ArrayList<Integer> curArray = new ArrayList<>(Arrays.asList(0));
+        NNumber current = new NNumber(curArray, curArray.size());
+
+//Деление столбиком
+        while (COM_NN_D(nf, second) != 1) {
+            current = DIV_NN_Dk(nf, second);
+            //System.out.print(current.getNumbers());
+            //System.out.print(second.getNumbers());
+
+            //System.out.print(MUL_NN_N(second, current).getNumbers());
+
+            nf = SUB_NN_N(nf, MUL_NN_N(second, current));
+//            System.out.print(nf.getNumbers());
+
+            arresult = ADD_NN_N(arresult, current);
+  //          System.out.print(arresult.getNumbers());
         }
+        return arresult;
     }
+
+
 
     public static NNumber MOD_NN_N(NNumber first, NNumber second) {
 
-        return null;
+        if (COM_NN_D(first, second) == 1) {
+            NNumber pos = first;
+            first = second;
+            second = pos;
+        }
+
+        return SUB_NN_N(first, MUL_NN_N(DIV_NN_N(first, second), second));
     }
+
+
+
+    public static NNumber GCF(NNumber first, NNumber second) {
+        while (NZER_N_B(first) && NZER_N_B(second)) {
+            if (COM_NN_D(first, second) == 2) {
+                MOD_NN_N(first, second);
+            } else {
+                MOD_NN_N(second, first);
+            }
+        }
+        return ADD_NN_N(first, second);
+    }
+
+
 
     public static NNumber GCF_NN_N(ArrayList<NNumber> numbers){
         return null;
     }
+
+
+
+    public static NNumber LCM(NNumber first, NNumber second) {
+        return DIV_NN_N(MUL_NN_N(first, second), GCF(first, second));
+    }
+
+
 
     public static NNumber LCM_NN_N(ArrayList<NNumber> numbers) {
         return null;
