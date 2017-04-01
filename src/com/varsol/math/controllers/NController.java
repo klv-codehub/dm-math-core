@@ -284,7 +284,7 @@ public class NController {
      */
 
     public static NNumber MUL_NN_N(NNumber first, NNumber second) {
-
+        /*
         if(COM_NN_D(first, second).intValue() == 2) {
             NNumber pos = first;
             first = second;
@@ -300,7 +300,36 @@ public class NController {
         }
 
         first.setNumbers(bigger);
-        return first;
+        */
+
+        if (COM_NN_D(first, second) == 1) {
+            NNumber tmp = first;
+            first = second;
+            second = tmp;
+        }
+
+        ArrayList<Integer> mulArray = new ArrayList<>(Arrays.asList(0));
+        NNumber mul = new NNumber(mulArray, mulArray.size());
+
+        NNumber newMul = mul;
+
+        for (int i = 0; i < second.getElderPosition(); i++) {
+
+            System.out.println(MUL_ND_N(first, (Integer) second.getNumbers().get(i)).getNumbers());
+            System.out.println(MUL_Nk_N (MUL_ND_N(first, (Integer) second.getNumbers().get(i)), i).getNumbers());
+
+            System.out.println(mul.getNumbers());
+
+            mulArray = ADD_NN_N (MUL_Nk_N (MUL_ND_N(first, (Integer) second.getNumbers().get(i)), i), mul).getNumbers();
+
+            mul.setNumbers(mulArray);
+            mul.setElderPosition(mulArray.size());
+
+            System.out.println(mul.getNumbers());
+
+        }
+        System.out.println(mul.getNumbers());
+        return mul;
     }
 
 
