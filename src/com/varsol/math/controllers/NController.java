@@ -113,8 +113,14 @@ public class NController {
 
     public static NNumber ADD_NN_N(NNumber first, NNumber second){
 
+        //System.out.println(first.getNumbers() + " - first");
+        //System.out.println(second.getNumbers() + "- second");
+
         //меняем переменные так, чтобы first >= second
         if (COM_NN_D(first, second) == 1) {
+
+            //System.out.println("YAH");
+
             NNumber tmp = first;
             first = second;
             second = tmp;
@@ -122,8 +128,18 @@ public class NController {
 
         //создаем массивы цифр, из которых состоят числа
         ArrayList<Integer> num1 = first.getNumbers();
+
+        //System.out.println(num1+ " - firstnum");
+
+
         ArrayList<Integer> num2 = second.getNumbers();
+
+        //System.out.println(num2+ " - scndnum");
+
         ArrayList<Integer> result = new ArrayList<>();
+
+        //System.out.println(first.getElderPosition() + " - 1eld");
+        //System.out.println(second.getElderPosition() + " - 2eld");
 
         //для удобства вычисления обнуляем элементы массива меньшего размера
         for (int j = second.getElderPosition(); j < first.getElderPosition(); j++) {
@@ -259,13 +275,18 @@ public class NController {
         На вход: Натуральное число типа NNumber, k - коэффициент
         Возвращает: Натуральное число
 
+
+        Правка: Artem Kaloev/Alexander Shvalev
     */
 
     public static NNumber MUL_Nk_N(NNumber natural, Integer k){
-        NNumber res = new NNumber (natural.getNumbers(),k);
+        NNumber res = new NNumber (natural.getNumbers(), natural.getElderPosition() + k);
         for (int i = 0; i < k.intValue(); i++){
             res.getNumbers().add(0 , Integer.valueOf(0));
         }
+        //res.setElderPosition();
+        //System.out.println("jojo" + res.getElderPosition());
+
         //System.out.print(res.getNumbers());
         return res;
     }
@@ -315,20 +336,28 @@ public class NController {
 
         for (int i = 0; i < second.getElderPosition(); i++) {
 
-            System.out.println(MUL_ND_N(first, (Integer) second.getNumbers().get(i)).getNumbers());
-            System.out.println(MUL_Nk_N (MUL_ND_N(first, (Integer) second.getNumbers().get(i)), i).getNumbers());
+            //System.out.println("ND_N " + MUL_ND_N(first, (Integer) second.getNumbers().get(i)).getNumbers());
+            //System.out.println("ND_N " + MUL_ND_N(first, (Integer) second.getNumbers().get(i)).getElderPosition());
 
-            System.out.println(mul.getNumbers());
+            //System.out.println("Nk_N " + MUL_Nk_N (MUL_ND_N(first, (Integer) second.getNumbers().get(i)), i).getNumbers());
+            //System.out.println("Nk_N " + MUL_Nk_N (MUL_ND_N(first, (Integer) second.getNumbers().get(i)), i).getElderPosition());
+
+
+            //System.out.println("mul " + mul.getNumbers());
+
 
             mulArray = ADD_NN_N (MUL_Nk_N (MUL_ND_N(first, (Integer) second.getNumbers().get(i)), i), mul).getNumbers();
 
             mul.setNumbers(mulArray);
+
+            //System.out.println("mulArray" + mulArray);
+
             mul.setElderPosition(mulArray.size());
 
-            System.out.println(mul.getNumbers());
+            //System.out.println(mul.getNumbers());
 
         }
-        System.out.println(mul.getNumbers());
+        //System.out.println(mul.getNumbers());
         return mul;
     }
 
@@ -484,19 +513,25 @@ public class NController {
             first = second;
             second = pos;
         }
-
+        //System.out.println(SUB_NN_N(first, MUL_NN_N(DIV_NN_N(first, second), second)).getNumbers());
         return SUB_NN_N(first, MUL_NN_N(DIV_NN_N(first, second), second));
     }
 
 
 
     public static NNumber GCF(NNumber first, NNumber second) {
+
         while (NZER_N_B(first) && NZER_N_B(second)) {
+            //MOD_NN_N(first, second);
             if (COM_NN_D(first, second) == 2) {
-                MOD_NN_N(first, second);
+                first = MOD_NN_N(first, second);
+                //System.out.println(first.getNumbers());
             } else {
-                MOD_NN_N(second, first);
+                second =  MOD_NN_N(second, first);
+                //System.out.println(second.getNumbers());
             }
+
+
         }
         return ADD_NN_N(first, second);
     }
@@ -504,7 +539,15 @@ public class NController {
 
 
     public static NNumber GCF_NN_N(ArrayList<NNumber> numbers){
-        return null;
+
+
+        NNumber gcf = numbers.get(0);
+
+        for (int i = 1; i < numbers.size(); i++) {
+            gcf = GCF(gcf, numbers. get(i));
+        }
+
+        return gcf;
     }
 
 
@@ -516,6 +559,14 @@ public class NController {
 
 
     public static NNumber LCM_NN_N(ArrayList<NNumber> numbers) {
-        return null;
+
+
+        NNumber lcm = numbers.get(0);
+
+        for (int i = 1; i < numbers.size(); i++) {
+            lcm = LCM(lcm, numbers. get(i));
+        }
+
+        return lcm;
     }
 }
